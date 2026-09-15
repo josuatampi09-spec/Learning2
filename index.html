@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platform Belajar Interaktif PPLG</title>
+    <title>Nexus Academy - 20 Modul PPLG</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <div class="logo">
             <i class="fas fa-rocket"></i> Nexus Academy
@@ -23,82 +22,23 @@
         </div>
     </header>
 
-    <!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="courseProgress" style="width: 0%;"></div>
     </div>
 
     <main class="container">
         <div class="intro-header fade-in">
-            <h1>Selamat Datang di Modul Dasar-Dasar PPLG</h1>
-            <p>Selesaikan mini kuis di setiap modul untuk mengumpulkan XP dan membuka tahap selanjutnya.</p>
+            <h1>Jalur Pembelajaran PPLG Fase E</h1>
+            <p>Selesaikan 20 misi mini-kuis ini secara berurutan untuk menjadi seorang Junior Programmer!</p>
         </div>
 
-        <!-- Modul 1 -->
-        <div class="module-card fade-in" id="module1">
-            <div class="module-header">
-                <h2><i class="fas fa-book-open"></i> Bab 1: Pengenalan HTML & CSS</h2>
-                <span class="status-badge status-active">Aktif</span>
-            </div>
-            <div class="module-content">
-                <p>HTML (Hypertext Markup Language) adalah kerangka dasar dari sebuah website. CSS (Cascading Style Sheets) digunakan untuk menghias kerangka tersebut agar terlihat menarik.</p>
-                <div class="code-snippet">
-                    <code>&lt;h1&gt;Halo Dunia!&lt;/h1&gt;</code>
-                </div>
-                
-                <!-- Mini Kuis Modul 1 -->
-                <div class="mini-quiz">
-                    <h4><i class="fas fa-question-circle"></i> Mini Kuis Analisa</h4>
-                    <p>Berdasarkan kode di atas, tag apa yang digunakan untuk membuat judul utama pada sebuah halaman web?</p>
-                    <div class="quiz-options">
-                        <button onclick="cekKuis(1, 'A', 'B')">A. &lt;head&gt;</button>
-                        <button onclick="cekKuis(1, 'B', 'B')">B. &lt;h1&gt;</button>
-                        <button onclick="cekKuis(1, 'C', 'B')">C. &lt;title&gt;</button>
-                    </div>
-                    <p id="feedback1" class="feedback-msg"></p>
-                </div>
-            </div>
-            <div class="module-footer">
-                <button class="btn-action btn-disabled" id="btnSelesaiModul1" onclick="selesaikanModul(1, 2, 50)" disabled>
-                    <i class="fas fa-lock"></i> Selesaikan Kuis Untuk Lanjut
-                </button>
-            </div>
-        </div>
+        <!-- Wadah Kosong: Modul ke-1 sampai 20 akan dimunculkan di sini oleh JavaScript secara otomatis -->
+        <div id="moduleContainer"></div>
 
-        <!-- Modul 2 -->
-        <div class="module-card locked fade-in" id="module2">
-            <div class="module-header">
-                <h2><i class="fas fa-lock" id="iconLock2"></i> Bab 2: Logika Pemrograman</h2>
-                <span class="status-badge status-locked" id="badgeModul2">Terkunci</span>
-            </div>
-            <div class="module-content hidden" id="contentModul2">
-                <p>Logika pemrograman sangat penting untuk memecahkan masalah. Sebelum menulis kode, kita harus menyusun algoritma yang jelas. Tipe data <b>Boolean</b> sering digunakan untuk logika percabangan karena hanya memiliki dua nilai dasar.</p>
-                
-                <!-- Mini Kuis Modul 2 -->
-                <div class="mini-quiz">
-                    <h4><i class="fas fa-brain"></i> Uji Logika</h4>
-                    <p>Apa saja dua kemungkinan nilai dari tipe data Boolean?</p>
-                    <div class="quiz-options">
-                        <button onclick="cekKuis(2, 'A', 'C')">A. Angka dan Huruf</button>
-                        <button onclick="cekKuis(2, 'B', 'C')">B. Positif dan Negatif</button>
-                        <button onclick="cekKuis(2, 'C', 'C')">C. True dan False (Benar / Salah)</button>
-                    </div>
-                    <p id="feedback2" class="feedback-msg"></p>
-                </div>
-                
-                <div class="module-footer">
-                    <button class="btn-action btn-disabled" id="btnSelesaiModul2" onclick="selesaikanModul(2, null, 100)" disabled>
-                        <i class="fas fa-lock"></i> Selesaikan Kuis Terakhir
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Notifikasi Pencapaian XP -->
         <div id="achievementNotif" class="achievement hidden">
             <i class="fas fa-medal"></i>
             <div>
-                <h4>Pencapaian Terbuka!</h4>
+                <h4>Level Up!</h4>
                 <p id="achievementText">Anda mendapatkan XP.</p>
             </div>
         </div>
